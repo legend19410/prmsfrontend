@@ -1,0 +1,47 @@
+.officerNav{
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	background-color:  var(--theme-color);
+	border-radius: 5px;
+	padding-left: 50px;
+	font-size: 0.9rem;
+	height: 50px;
+}
+
+.officerLogo{
+	background-color: rgb(236, 242, 245);;
+	border-radius: 50%;
+	height: 40px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.officerHeading{
+	color: white;
+	font-weight: bold;
+	font-family: cursive;
+	font-size: large;
+	margin-right: 30%;
+}
+
+
+.link{
+	display: inline-block;
+	display: flex;
+	align-items: center;
+	background-color: #3E5780;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	text-align: center;
+}
+
+.link:hover{
+	background-color: var(--theme-color-sec);
+	color: black;
+	border-radius: 3px;
+}
+
+
+

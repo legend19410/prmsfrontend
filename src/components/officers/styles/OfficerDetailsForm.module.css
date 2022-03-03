@@ -1,0 +1,39 @@
+.field{
+    /* border: 1px solid blue; */
+    padding: 5px;
+}
+
+.field label, .field input, .field select{
+    min-width: 200px;
+    max-width: 200px;
+    display: inline-block;
+}
+
+.field input, .field select{
+    padding: 5px;
+}
+
+.submitBtn{
+    padding: 10px;
+    background-color: #3E5780;
+    margin-left: 210px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 20px;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.message{
+    padding-left: 5%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.failed{
+    color: red;
+}
+
+.success{
+    color: green;
+}

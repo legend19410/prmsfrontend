@@ -1,0 +1,25 @@
+/* #formation-access .options, #formation-access button{
+    display: inline;
+} */
+
+#formation-access{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: auto;
+}
+
+#formation-access .options{
+    grid-row: 1/2;
+    grid-column: 1/2;
+   
+}
+
+#formation-access .select-all{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: block;
+    color: white;
+    background-color: #3E5780;
+    border: none;
+    border-radius: 4px;
+}

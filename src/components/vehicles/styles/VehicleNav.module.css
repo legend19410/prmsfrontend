@@ -1,0 +1,15 @@
+
+.vehicleNav{
+	padding-top: 10px;
+}
+
+.vehicleNav li{
+	display: inline-block;
+	margin-left: 150px;
+}
+
+
+.link{
+	list-style: none;
+	text-decoration: none;
+}

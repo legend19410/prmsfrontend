@@ -1,0 +1,67 @@
+.rosterTable{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nameAndRank{
+
+}
+
+.rosterTable table input{
+    min-width: 5px;
+    /*border: 1px solid blue;*/
+    width: 100%; 
+}
+
+.nameCol{
+    max-width: 170px;
+    min-width: 170px;
+    padding-left: 5px;
+    border:  1px solid #3E5780;
+}
+
+.daysCol{
+   /* max-width: 40%;
+    min-width: 40%;*/
+    /*border: 1px solid red;*/
+}
+
+.rosterTable table thead{
+    
+    border: 1px solid black;
+}
+
+
+.rosterTable table th{
+    /* max-width: 120px; */
+    border: 1px solid black;
+    background-color: #3E5780;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.rosterTableHead{
+    border: 1px solid black;
+}
+
+.submitBtn{
+    background-color: #3E5780;
+    color:  white;
+    border-radius: 5px;
+    width: 200px;
+    padding: 7px;
+    border: none;
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+}
+
+.borderTopRightRadius{
+    border-top-right-radius: 5px;
+}
+
+.borderTopLeftRadius{
+    border-top-left-radius: 5px;
+}
