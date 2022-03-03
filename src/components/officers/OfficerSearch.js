@@ -19,7 +19,7 @@ export default function OfficerSearch() {
 
     return (
         <div id='officerSearch'>
-            <label className='search-label' for=''>Enter search query:</label>
+            <label className='search-label'>Enter search query:</label>
             <input 
                 className='search-input' 
                 placeholder="name or reg no" 
