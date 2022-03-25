@@ -1,0 +1,113 @@
+.home{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1em;
+}
+
+.banner{
+    height: 50vh;
+    flex-grow: 1;
+    box-shadow: var(--box-shadow);
+    color: white;
+    padding-left: 17em;
+    padding-top: 7em;
+}
+
+
+.banner h1{
+    text-transform:uppercase;
+    font-family: cursive;
+    font-size: 3rem;
+}
+
+.banner h3{
+    font-size: 1.6rem;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.banner button{
+    font-size: 2rem;
+    padding: .6em 2em;
+    border: none;
+}
+
+.banner *{
+    margin-bottom: .2em;
+}
+
+.banner button:hover{
+    cursor: pointer;
+    letter-spacing: .2em;
+    color: white;
+    background-color: lightskyblue;
+}
+
+
+.banner img{
+    height: 30%;
+}
+
+.content{
+    flex-grow: 1;
+    display: flex;
+    /* border: 1px solid green; */
+    margin-top: 1em;
+    justify-content: space-between;
+}
+
+.box{
+    background-color: var(--theme-color);
+    /* border-radius: 1em; */
+    width: 33%;
+    box-shadow: var(--box-shadow);
+}
+
+.box p{
+    color: white;
+    font-size: 1.7rem;
+    font-family: cursive;
+    /* font-weight: bold; */
+    padding: 1em 1.9em;
+    word-spacing: .3em;
+}
+
+.imgContainer img{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* border-radius: 1em; */
+}
+
+@media(max-width: 503px){
+    .content{
+        flex-direction: column;
+    }
+
+    .box{
+        width: 100%;
+    }
+
+    .banner{
+        padding-left: 0;
+        padding-top: 0;
+        padding: auto auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .banner h3{
+        font-size: 1.4rem;
+    }
+
+    .banner button{
+        margin-top: 1em;
+    }
+
+    .box{
+        margin-bottom: 1em;
+    }
+}

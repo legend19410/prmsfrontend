@@ -1,10 +1,13 @@
 import React from 'react'
-import './styles/header.css'
 import { useSelector } from 'react-redux'
+import Nav from './Nav'
+
+import styles from './styles/Header.module.css'
 
 export default function Header() {
 
      const user = useSelector(state=>state.user.user)
+     const isAuth = useSelector(state => state.user.isAuth)
      const officerHeadDress = './images/officer_head_dress.jpg'
      const rankAndFileHeadDress = './images/rank_N_file_head_dress.jpg'
 
@@ -24,22 +27,24 @@ export default function Header() {
      }
 
     return (
-        <div id='header' className='header'>
-            <img className='logo' src="./images/jcf_logo2.jpg"></img>
-            <div className='headings'>
-                <p className="entity-name">Jamaica Constabulary Force</p>
-                <p className='entity-motto'>Resource Management System</p>
-                {/* <p className='entity-motto'>Rule of Law * Respect for All * A Force for Good</p> */}
+        <div id='header' className={styles.header}>
+            <img className={styles.logo} alt='' src="./images/jcf_logo2.jpg"></img>
+            <div className={styles.headings}>
+                <p className={styles.entityName}>Jamaica Constabulary Force</p>
+                <p className={styles.entityMotto}>Resource Management System</p>
             </div>
+            {isAuth?(<Nav/>):(<div></div>)}
             {
-                (Object.keys(user).length !== 0)?(
-                    <div className='profile'>
-                        <img className='profile-photo' src='./images/profile-photo.jpg'/>
-                        <p className='profile-name'>{user.rank} {user.firstName} {user.lastName}</p>
-                        <img className='head-dress' src={getHeadDress(user.rank)}/>
+                isAuth?(
+                    <div className={styles.profile}>
+                        <div className={styles.profilePhoto}>
+                                <img  src='./images/profile-photo.jpg' alt=''/>
+                        </div>
+                        <p className={styles.profileName}>{user.rank} {user.firstName} {user.lastName}</p>
+                        <img className={styles.headDress} src={getHeadDress(user.rank)} alt=""/>
 
                     </div>
-                ):(<div></div>)
+                ):(<div className={styles.profile}></div>)
             }
             
         </div>

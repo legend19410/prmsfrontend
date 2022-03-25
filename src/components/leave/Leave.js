@@ -13,6 +13,7 @@ function Leave() {
 
     useLayoutEffect(() => {
         dispatch(fetchLeave(createStringHeader(optionSelected)))    
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

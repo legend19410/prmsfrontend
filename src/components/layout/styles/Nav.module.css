@@ -1,0 +1,114 @@
+.nav{
+    display: flex;
+    flex-grow: 1;
+    gap: 1em;
+    font-size: 2rem;
+    align-items:flex-end;
+    justify-content: center;
+  
+}
+
+.desktopView{
+    display: flex;
+}
+
+.mobileView{
+    display: none;
+}
+
+.linkContainer{
+    position: relative;
+    padding: 0 .5em;
+    z-index: 200;
+}
+
+.linkContainer:hover{
+    cursor: pointer;
+    color: var(--theme-color);
+    background-color: white;
+    
+}
+
+.linkContainer a{
+    text-decoration: none;
+    color: white;
+}
+
+.linkContainer a:hover{
+    color: var(--theme-color);
+}
+
+.display{
+    display: initial;
+}
+
+
+
+.drop{
+    display: none;
+    position: absolute;
+    background-color: var(--theme-color-sec);
+    box-shadow: var(--box-shadow);
+    color: black;
+    font-size: 1.4rem; 
+    top: 3em;
+    left: 0;
+    width: 200px;
+    padding: 1em;
+    z-index: 100;
+}
+
+
+.logoutBtn{
+    padding: .2em 1em;
+    color: var(--theme-color);
+    background: white;
+    border: none;
+    border-radius: 1em;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logoutBtn:hover{
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.link{
+    list-style: none;
+    padding-left: 3em;
+    text-decoration: none;
+}
+
+.link li{
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.link li:hover{
+    background-color: #3B6082;
+    color: white;
+}
+
+.link img{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+@media(max-width: 503px){
+    
+    .desktopView{
+        display: none;
+    }
+
+    .mobileView{
+        display: initial;
+        font-size: large;
+        align-self: center;
+    }
+}

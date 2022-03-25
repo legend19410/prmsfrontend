@@ -14,6 +14,7 @@ export default function FirearmSearch() {
 
     useEffect(()=>{
         dispatch(searchFirearms(createStringHeader(optionSelected), firearmQuery))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [firearmQuery])
 
 

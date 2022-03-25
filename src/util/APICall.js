@@ -11,12 +11,14 @@ export const request = (type, route, headers, params)=>{
         }
     }
     if (type === 'GET'){
+    
         axios.get(route,header)
         .then((response)=>{
             resolve(response)
 
         }).catch((error)=>{ 
-            if((error.response.status === 401) &&(error.response.data.message === "expired")){
+            console.log(error.response.data)
+            if(error.response.status === 401){
                 if(refrestMyToken().success){
                     request(type, route, headers)
                 }
@@ -32,7 +34,7 @@ export const request = (type, route, headers, params)=>{
                 resolve(response)
 
             }).catch((error)=>{ 
-                if((error.response.status === 401) &&(error.response.data.message === "expired")){
+                if((error.response.status === 401)){
                     if(refrestMyToken().success){
                         request(type, route, headers)
                     }
@@ -47,7 +49,8 @@ export const request = (type, route, headers, params)=>{
                 resolve(response)
 
             }).catch((error)=>{ 
-                if((error.response.status === 401) &&(error.response.data.message === "expired")){
+                
+                if((error.response.status === 401)){
                     if(refrestMyToken().success){
                         request(type, route, headers)
                     }
@@ -76,7 +79,9 @@ const refrestMyToken = ()=>{
     }else{
         response['success'] = false
     }
-    if(!response['success']) store.dispatch(denyAccess())
+    if(!response['success']){
+        store.dispatch(denyAccess())
+    } 
     return response
     
 }

@@ -14,6 +14,7 @@ export default function VehicleSearch() {
 
     useEffect(()=>{
         dispatch(searchVehicles(createStringHeader(optionSelected), vehicleQuery))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [vehicleQuery])
 
 

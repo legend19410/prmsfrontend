@@ -14,6 +14,7 @@ export default function OfficerSearch() {
 
     useEffect(()=>{
         dispatch(searchOfficers(createStringHeader(optionSelected), officerQuery))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [officerQuery])
 
 

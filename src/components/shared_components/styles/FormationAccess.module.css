@@ -1,25 +1,33 @@
-/* #formation-access .options, #formation-access button{
-    display: inline;
-} */
 
-#formation-access{
+.formationAccess{
     display: grid;
     grid-template-columns: 90% 10%;
     grid-template-rows: auto;
 }
 
-#formation-access .options{
+.options{
     grid-row: 1/2;
     grid-column: 1/2;
    
 }
 
-#formation-access .select-all{
+ .selectAll{
     grid-row: 1/2;
     grid-column: 2/3;
     display: block;
     color: white;
     background-color: #3E5780;
     border: none;
-    border-radius: 4px;
+    border-radius: .4em;
+}
+
+@media(max-width: 503px){
+
+    .formationAccess{
+        grid-template-columns: 100%;
+    }
+    .selectAll{
+        display: none;
+        background-color: red;
+    }
 }

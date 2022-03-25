@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react'
-import {NavLink} from 'react-router-dom'
 // import './styles/officer.css'
 import NavBar from '../layout/NavBar'
-import {logout, createStringHeader} from '../../util/utilityFunctions'
+import {createStringHeader} from '../../util/utilityFunctions'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchRadios } from '../../redux/radios/radioActions'
 import RadioSearch from './RadioSearch'
@@ -17,6 +16,7 @@ const Radio = () => {
 
     useEffect(()=>{
         dispatch(fetchRadios(createStringHeader(optionSelected)))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[optionSelected])
 
    

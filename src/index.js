@@ -8,8 +8,8 @@ import axios from 'axios';
 import store from './redux/store'
 import { Provider } from 'react-redux'
 
-axios.defaults.baseURL = 'https://prms-jcf.herokuapp.com/'
-// axios.defaults.headers.common['Authorization'] = 'Bearer' + ''
+// axios.defaults.baseURL = 'https://prms-jcf.herokuapp.com/'
+axios.defaults.baseURL = 'http://localhost:8080/'
 
 ReactDOM.render(
   <React.StrictMode>

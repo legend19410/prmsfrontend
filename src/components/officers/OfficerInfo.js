@@ -26,6 +26,7 @@ function OfficerInfo() {
         .catch(err=>{
             console.log('ERROR OCCURRED WHEN MAKING REQUEST FOR OFFICER')
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return (

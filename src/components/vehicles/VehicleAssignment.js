@@ -3,7 +3,7 @@ import NavBar from '../layout/NavBar'
 import styles from './styles/VehicleAssignment.module.css'
 import {request} from '../../util/APICall'
 import Table from '../shared_components/Table'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { getRankAbbrev } from '../../util/utilityFunctions'
 import FormationAccess from '../shared_components/FormationAccess'
 

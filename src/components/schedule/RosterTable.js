@@ -1,5 +1,4 @@
 import React, {useState,useLayoutEffect,useEffect} from 'react'
-import Officer from '../officers/Officer'
 import styles from './styles/RosterTable.module.css'
 import {useDispatch} from 'react-redux'
 import {getRankAbbrev} from '../../util/utilityFunctions'
@@ -8,7 +7,7 @@ function RosterTable({submitSchedule, week, weekSchedule, updateTask}) {
 
     const dispatch = useDispatch()
     const  [reren, setRerend] = useState(false)
-    const [dutyTypes, setDutyTypes] = useState([])
+    // const [dutyTypes, setDutyTypes] = useState([])
     
     useEffect(()=>{
         // fetch types from server
@@ -20,7 +19,7 @@ function RosterTable({submitSchedule, week, weekSchedule, updateTask}) {
     
     return (
         <div className={`${styles.rosterTable}`} id='RosterTable'>
-                <button className={`${styles.submitBtn}`} onClick={(e)=>submitSchedule(e)}>Submit Schedule</button>
+                {/* <button className={`${styles.submitBtn}`} onClick={(e)=>submitSchedule(e)}>Submit Schedule</button> */}
                 <table>
                     <thead>
                         <tr className={`${styles.rosterTableHead}`}>

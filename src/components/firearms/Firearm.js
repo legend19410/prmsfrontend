@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
-import {NavLink} from 'react-router-dom'
 import NavBar from '../layout/NavBar'
-import {logout, createStringHeader} from '../../util/utilityFunctions'
+import {createStringHeader} from '../../util/utilityFunctions'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchFirearms } from '../../redux/firearms/firearmActions'
 import FirearmSearch from './FirearmSearch'
@@ -16,6 +15,7 @@ const Firearm = () => {
 
     useEffect(()=>{
         dispatch(fetchFirearms(createStringHeader(optionSelected)))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[optionSelected])
 
    

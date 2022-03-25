@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { request } from '../../util/APICall'
 import styles from './styles/OfficerForm.module.css'
 
 function OfficerForm() {
@@ -19,9 +18,9 @@ function OfficerForm() {
 
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
 
-    const [message, setMessage] = useState("")
+    // const [message, setMessage] = useState("")
 
-    const [formations, selectedFormations] = useState([{name:"SO"},{name:"CIB"}])
+    // const [formations, selectedFormations] = useState([{name:"SO"},{name:"CIB"}])
     const [ranks, setRanks] = useState(['Cons.', 'Cpl.', 'Sgt.'])
 
     const handleSubmit = (event)=>{
@@ -32,9 +31,9 @@ function OfficerForm() {
         
     }
 
-    const validateOfficerData = ()=>{
+    // const validateOfficerData = ()=>{
 
-    }
+    // }
 
 
     const handleChange = event => {

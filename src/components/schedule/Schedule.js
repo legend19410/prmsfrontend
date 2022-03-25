@@ -68,20 +68,22 @@ export default function Schedule() {
 
         generateWeek(selectedWeek)
         dispatch(fetchSchedule(createStringHeader(optionSelected), generateWeekSchedule))
-    
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[optionSelected, selectedWeek])
 
     
     return (
         <div className='body access-body'>
-            <NavBar/>
-            <div className='home-body'>
+            <div className={`${styles.schedule} home-body`}>
                 <FormationAccess/>
                 <div className={styles.selectWeek}>
                     <label>Select Week:</label>
                     <input onChange={e=>setSelectedWeek(moment(e.target.value))} type='date'/>
+                    <button onClick={e=>submitSchedule(e)} className={styles.submitScheduleBtn}>Submit Schedule</button>
                 </div>
-                <RosterTable submitSchedule={submitSchedule} week={week} weekSchedule={weekSchedule} updateTask={updateTask}/>
+                <div className={styles.tableContainer}>
+                        <RosterTable submitSchedule={submitSchedule} week={week} weekSchedule={weekSchedule} updateTask={updateTask}/>
+                </div>
             </div>
 
         </div>

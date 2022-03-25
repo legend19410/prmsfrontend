@@ -1,11 +1,48 @@
+.schedule{
+    padding: 0 1em;
+    margin-top: 1em;
+    margin-bottom:  1em;
+}
+
+.tableContainer{
+    width: 100%;
+    overflow-x: scroll;
+}
+
 .selectWeek{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    font-size: 1.5rem;
+}
+
+.selectWeek input{
+    padding: .3em .9em;
+    width: 13em;
+    border: 1px solid var(--theme-color);
+}
+
+.submitScheduleBtn{
+    color: white;
+    background: var(--theme-color);
+    border:  none;
+    margin-left: 1.2em;
+    padding: .6em .9em;
+}
+
+.submitScheduleBtn:hover{
+    cursor: pointer;
+    letter-spacing: .1em;
 }
 
 .selectWeek input, .selectWeek label{
     display: inline-block;
-    margin-left: 10px;   
+    margin-left: 2em;   
+}
+
+@media(max-width:503px){
+    .selectWeek label{
+        display: none;
+    }
 }

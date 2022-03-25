@@ -14,8 +14,10 @@ export default function OfficerNav(){
 	return(
 
 		<div className={`${styles.officerNav}`}>
-				<img className={styles.officerLogo} src='/images/officer.png'/>
-				<p className={styles.officerHeading}>OFFICERS</p>
+				<div className={styles.logo}>
+					<img className={styles.officerLogo} alt='' src='/images/officer.png'/>
+					<p className={styles.officerHeading}>OFFICERS</p>
+				</div>
 				<NavLink className={`${styles.link}`} to='/officers'><GroupOutlinedIcon style={iconStyles}/>All Officers</NavLink>
 				<NavLink className={`${styles.link}`} to='/add-officer'><PersonAddAltOutlinedIcon style={iconStyles}/>Create Officer</NavLink>
 				<NavLink className={`${styles.link}`} to='/role-assignment'><AddBoxOutlinedIcon style={iconStyles}/>Role Assignment</NavLink>

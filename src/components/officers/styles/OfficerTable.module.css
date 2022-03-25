@@ -11,22 +11,15 @@ box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
 -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
 
-.officerTable h2 {
-font-size: 26px;
-margin: 20px 0;
-text-align: center;
 
-}
-.officerTable h2 small {
-font-size: 0.5em;
-}
+
 
 .responsiveTable li {
-    border-radius: 3px;
-    padding: 10px 10px;
+    border-radius: .3em;
+    padding: 1em 1em;
     display: flex;
     /* justify-content: space-between; */
-    margin-bottom: 5px;
+    margin-bottom: .3em;
     border: 1px solid #3E5780;
 }
 
@@ -37,7 +30,8 @@ font-size: 0.5em;
 
 .responsiveTable .tableHeader {
     background-color: #3E5780;
-    font-size: 14px;
+    font-size: 1rem;
+    font-weight: bold;
     color:#ffffff;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -52,26 +46,33 @@ font-size: 0.5em;
     /* border: 1px solid blue; */
     min-width: 130px;
     max-width: 130px;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .col6{
     /* border: 1px solid blue; */
     min-width: 180px;
     max-width: 190px;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .col7{
     /* border: 1px solid blue; */
     min-width: 260px;
     max-width: 190px;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .col1, .col2{
     /* border: 1px solid blue; */
     min-width: 100px;
     max-width: 100px;
-    font-size: 15px;
+    font-size: 1.5rem;
+}
+
+@media(max-width: 1094px){
+
+    .officerTable{
+        width: 1800px;
+    }
 }

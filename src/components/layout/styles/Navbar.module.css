@@ -1,10 +1,16 @@
 .navBar{
+    display: none;
+    position: fixed;
+    flex-grow: 1;
     background-color: rgb(236, 242, 245);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 1px solid  #3B6082;
     margin-left: 10px;
-    /* position: fixed; */
+    font-size: 1.5rem;
+    min-width: 240px;
+    max-width: 240px;
+    /* min-width: 20%; */
 }
 
 .link{
@@ -33,3 +39,11 @@
     margin-right: 5px;
 }
 
+
+@media (max-width:503px){
+
+    .navBar{
+        max-width: 100%;
+    }
+
+}

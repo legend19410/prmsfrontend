@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 import querystring from 'querystring'
 import {request} from '../../util/APICall'
 import img1 from '../../lockscreen.jpg'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { fetchUser } from '../../redux/user/userActions'
 
 
@@ -26,7 +26,7 @@ export default function Login() {
 
         request('POST', 'api/login', {},querystring.stringify(authData))
         .then(response => {
-            const {username, accessToken, refreshToken} = response.data
+            const {accessToken, refreshToken} = response.data
             Cookies.set("accessToken",accessToken)
             Cookies.set("refreshToken",refreshToken)
             dispatch(fetchUser())

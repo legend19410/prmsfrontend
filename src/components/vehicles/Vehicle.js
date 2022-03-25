@@ -1,13 +1,11 @@
 import React, {useEffect} from 'react'
-import {NavLink} from 'react-router-dom'
 // import './styles/officer.css'
 import NavBar from '../layout/NavBar'
-import {logout, createStringHeader} from '../../util/utilityFunctions'
+import {createStringHeader} from '../../util/utilityFunctions'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchVehicles } from '../../redux/vehicles/vehicleActions'
 import VehicleSearch from './VehicleSearch'
 import FormationAccess from '../shared_components/FormationAccess'
-import VehicleTable from './VehicleTable'
 import VehicleNav from './VehicleNav'
 import Table from '../shared_components/Table'
 
@@ -44,6 +42,7 @@ const Vehicle = () => {
 
     useEffect(()=>{
         dispatch(fetchVehicles(createStringHeader(optionSelected)))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[optionSelected])
 
    

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { request } from '../../util/APICall'
 import styles from './RoleForm.module.css'
 
 function RoleForm() {
@@ -11,7 +10,7 @@ function RoleForm() {
     }) 
 
 
-    const [message, setMessage] = useState("")
+    // const [message, setMessage] = useState("")
 
     const [formations, selectedFormations] = useState([{name:"SO"},{name:"CIB"}])
 
@@ -26,9 +25,9 @@ function RoleForm() {
         
     }
 
-    const validateRoleData = ()=>{
+    // const validateRoleData = ()=>{
 
-    }
+    // }
 
 
     const handleChange = event => {

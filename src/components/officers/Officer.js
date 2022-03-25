@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
-// import './styles/officer.css'
-import NavBar from '../layout/NavBar'
+import './styles/officer.css'
 import { createStringHeader} from '../../util/utilityFunctions'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchOfficers } from '../../redux/officers/officerActions'
@@ -17,18 +16,20 @@ const Officer = () => {
 
     useEffect(()=>{
         dispatch(fetchOfficers(createStringHeader(optionSelected)))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[optionSelected])
 
    
     return (
         <div className='body access-body'>
-             <NavBar/>
-            <div className='home-body'>
+            <div className='officer home-body'>
                 <div className='officer-head'>
                     <OfficerNav/>
                     <FormationAccess/>
                     <OfficerSearch/>
-                    <OfficerTable officers={officers}/>
+                    <div className='tableContainer'>
+                            <OfficerTable officers={officers}/>
+                    </div>
                 </div>
             </div>
         </div> 

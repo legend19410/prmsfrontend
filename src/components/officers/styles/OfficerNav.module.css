@@ -1,12 +1,20 @@
 .officerNav{
-	margin-bottom: 10px;
+	margin-bottom: .8em;
 	display: flex;
 	align-items: center;
 	background-color:  var(--theme-color);
-	border-radius: 5px;
-	padding-left: 50px;
-	font-size: 0.9rem;
-	height: 50px;
+	border-radius: .5em;
+	padding-left: 4em;
+	padding-top: .4em;
+	padding-bottom: .4em;
+	font-size: 1.3rem;
+	
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+	margin-right: 30%;
 }
 
 .officerLogo{
@@ -22,7 +30,7 @@
 	font-weight: bold;
 	font-family: cursive;
 	font-size: large;
-	margin-right: 30%;
+	
 }
 
 
@@ -33,14 +41,34 @@
 	background-color: #3E5780;
 	color: white;
 	text-decoration: none;
-	padding: 10px;
+	padding: 1em;
 	text-align: center;
 }
 
 .link:hover{
 	background-color: var(--theme-color-sec);
 	color: black;
-	border-radius: 3px;
+	border-radius: .3em;
+}
+
+@media(max-width:503px){
+		.officerNav{
+			padding: 1em 0;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.link{
+			text-align: left;
+			display: inline-block;
+			margin-top: .5em;
+			/* border: 1px solid red; */
+		}
+
+		.logo{
+			margin: 0;
+			/* border: 1px solid red; */
+		}
 }
 
 

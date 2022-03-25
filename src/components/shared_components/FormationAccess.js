@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Option from './Option'
-import './formation_access.css'
+import styles from './styles/FormationAccess.module.css'
 import { getFormationOptions } from '../../util/utilityFunctions'
 import { updateSelectedFormations } from '../../redux/user/userActions'
 
@@ -14,10 +14,10 @@ function FormationAccess() {
     const dispatch = useDispatch()
 
     return (
-        <div id='formation-access' className='formationAccess'>
+        <div  className={styles.formationAccess}>
             
                 <span
-                    className='options'
+                    className={styles.options}
                     data-toggle="popover"
                     data-trigger="focus"
                     data-content="Please select account(s)"
@@ -38,7 +38,7 @@ function FormationAccess() {
                     
                 </span>
             <button 
-                className='select-all' 
+                className={styles.selectAll} 
                 onClick={()=>dispatch(updateSelectedFormations(getFormationOptions(permissions)))}>
                 Select All
             </button>

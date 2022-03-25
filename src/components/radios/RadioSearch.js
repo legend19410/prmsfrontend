@@ -14,6 +14,7 @@ export default function RadioSearch() {
 
     useEffect(()=>{
         dispatch(searchRadios(createStringHeader(optionSelected), radioQuery))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [radioQuery])
 
 
