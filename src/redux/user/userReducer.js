@@ -23,7 +23,8 @@ export default function userReducer(state = initialSate, action){
         case actionType.FETCH_USER_SUCCESS:
             return {
                 user:action.payload,
-                selectedFormations:getFormationOptions(action.payload.roles),
+                // selectedFormations:getFormationOptions(action.payload.roles),
+                selectedFormations:[],
                 isAuth: true,
                 loading: false,
                 error:''

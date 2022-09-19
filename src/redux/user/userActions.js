@@ -7,11 +7,13 @@ export const fetchUser = () => {
   return (dispatch) => {
     dispatch(fetchUserRequest())
 
-    request('GET', 'api/user', {},{})
+    request('GET', 'api/lvl1/user', {},{})
         .then(response =>{
             const user = response.data
-            dispatch(fetchUserSuccess(user)) 
+            dispatch(fetchUserSuccess(user))
+            console.log(user)
         }).catch(error=>{
+            console.log(error)
             dispatch(fetchUserFailure(error.message))
         })
   }

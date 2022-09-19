@@ -8,6 +8,9 @@ function OfficerDetailsForm({className, officer, setOfficer}) {
         'Constable', 'Corporal', 'Sergeant', 'Inspector', 'ASP', 
         'DSP', 'SSP', 'ACP', 'DCP', 'CP'
     ])
+    const [platoons, setPlatoons] = useState([
+        'Platoon One', 'Platoon Two', 'Platoons Three'
+    ])
 
     const [responseMessage, setResponseMessage] = useState({
         error:false,
@@ -44,7 +47,7 @@ function OfficerDetailsForm({className, officer, setOfficer}) {
     
 
     return(
-      <div className={className}>
+      <div className={`${className} ${styles.form}`}>
         <p className={`${styles.field}`}>
             <label>Reg No:</label>{officer.regNo}
         </p>
@@ -86,9 +89,26 @@ function OfficerDetailsForm({className, officer, setOfficer}) {
             <label>Email:</label>
             <input type='email' onChange={e=>handleChange(e)} className='jcfemail' value={officer.jcfemail}/>
         </p>
+    
         <p className={`${styles.field}`}>
             <label>Address:</label>
-            <input onChange={e=>handleChange(e)} className='address' type='text' value={officer.address}/>
+            <textarea onChange={e=>handleChange(e)} className='address'  value={officer.address}/>
+        </p>
+    
+        <p className={`${styles.field}`}>
+            <label>Platoon:</label>
+            <select value={officer.platoon} onChange={e=>handleSelection(e)} className='platoon'>
+                {
+                    platoons.map((platoon, index)=>(
+                        <option key={index} value={platoon}>{platoon}</option>
+                    ))
+                }
+            </select>
+        </p>
+        <p className={`${styles.field}`}>
+            <label>Company:</label>
+            <label>{officer.company}</label>
+            {/* <input onChange={e=>handleChange(e)} className='company' type='text' value={officer.company}/> */}
         </p>
         <button className={`${styles.submitBtn}`} onClick={(e)=>{handleUpdate(e)}}>Submit Changes</button>
         <p className={`${responseMessage.error?styles.failed:styles.success} ${styles.message}`}>{responseMessage.message}</p>

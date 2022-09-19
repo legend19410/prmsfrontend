@@ -9,6 +9,7 @@ function Nav() {
 
     const dropDown = useRef()
     const refMobile = useRef()
+    const desktopDrop = useRef()
 
     const dispatch = useDispatch()
 
@@ -17,12 +18,25 @@ function Nav() {
         dispatch(denyAccess())
     }
 
+//     const remove = (ev)=>{            
+//         if (!dropDown.current.contains(ev.target)) {
+//         //   dropDown.current.style.display = "none"
+//         setActive(prev=>{
+//                 return {...prev, dropDown:false}
+//         })
+//         }
+        
+        
+// }
+
+
     const remove = (ev)=>{
         console.log('evnt run')
             
             if (dropDown.current && !dropDown.current.contains(ev.target)) {
             
               dropDown.current.firstElementChild.style.display = "none"
+              desktopDrop.current.style.display = "none"
             }
     }
 
@@ -35,7 +49,8 @@ function Nav() {
             refMobile.current.style.display = 'initial'
             return
         }
-        ev.target.firstElementChild.style.display = "initial"
+        // ev.target.firstElementChild.style.display = "initial"
+        desktopDrop.current.style.display = "initial"
     }
   return (
     <div className={styles.nav} >
@@ -43,9 +58,9 @@ function Nav() {
                 <div className={styles.linkContainer}>
                         <NavLink to='/home'>Home</NavLink>
                 </div>
-                <div  onClick={e=>display(e)}  className={styles.linkContainer}>
+                <div  onClick={e=>display(e)}  className={styles.linkContainer} >
                     Menu
-                        <div  className={styles.drop}>
+                        <div  className={styles.drop} ref={desktopDrop}>
                             <NavLink className={`${styles.link}`} to="/officers"><li><img alt='' src="./images/officer.png"/>Officers</li></NavLink>
                             <NavLink className={`${styles.link}`} to="/schedule"><li><img alt='' src="./images/schedule.png"/>Work Schedule</li></NavLink>
                             <NavLink className={`${styles.link}`} to="/duty"><li><img alt='' src="./images/duty.png"/>Duties Performed</li></NavLink>

@@ -5,7 +5,7 @@ import {request} from '../../util/APICall'
 import OfficerDetailsForm from './OfficerDetailsForm'
 import RolesRable from '../role/RolesTable'
 import FormationAssignmentTable from '../formation/FormationAssignmentTable'
-
+import img from '../../profile-photo.jpg'
 import styles from './styles/OfficerInfo.module.css'
 
 
@@ -34,8 +34,9 @@ function OfficerInfo() {
             <NavBar/>
             <div className={`${styles.OfficerInfo} home-body`}>
                 <OfficerDetailsForm className={`${styles.officerDetails}`} officer={officer} setOfficer={setOfficer}/> 
-                <RolesRable className={`${styles.officerPermissions}`} roles={roles}/>
-                <FormationAssignmentTable className={`${styles.formationAssignments}`} formAssign={assignedFormations}/> 
+                <div className={`${styles.profileImg}`}>
+                        <img  src={img} alt='no image'/>
+                </div>
             </div>
         </div>
     )

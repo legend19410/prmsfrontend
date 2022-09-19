@@ -8,15 +8,15 @@ import axios from 'axios';
 import store from './redux/store'
 import { Provider } from 'react-redux'
 
-axios.defaults.baseURL = 'https://prms-jcf.herokuapp.com/'
-// axios.defaults.baseURL = 'http://localhost:8080/'
+// axios.defaults.baseURL = 'https://prms-jcf.herokuapp.com/'
+axios.defaults.baseURL = 'http://localhost:8080/'
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 // If you want to start measuring performance in your app, pass a function

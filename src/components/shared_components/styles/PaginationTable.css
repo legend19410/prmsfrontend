@@ -1,0 +1,31 @@
+#table table {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    border: 1px solid #3E5780;
+    width: 100%;
+    font-size: 1.2rem;
+
+  }
+  
+  #table table td, #table table th {
+    border-top: 1px solid #3E5780;
+    border-bottom: 1px solid #3E5780;
+    padding: 8px;
+  }
+  
+  /* #table table tr:nth-child(even){background-color: #f2f2f2;} */
+  
+  #table  table tr:hover {background-color: #ddd;}
+  
+  #table table th, tfoot td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3E5780;
+    color: white;
+  }
+
+  .twrap{
+    width: 100%;
+    border: 1px solid red;
+  }
